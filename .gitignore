@@ -1,0 +1,14 @@
+# Visual Studio / IDE local state
+.vs/
+*.user
+*.suo
+
+# Local tooling
+node_modules/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
