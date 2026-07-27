@@ -39,17 +39,46 @@ All of that also lives in `scripts/projects.js`, in the **`window.SITE`** object
 
 ---
 
+## 🔒 App privacy policies
+
+Every published app gets its own page at a stable URL you can paste straight into the Google Play Console:
+
+```
+/privacy/          ← the app picker
+/privacy/puffy/    ← https://maksi333.github.io/privacy/puffy/
+```
+
+The picker grid is data-driven like the project grid, but **each policy page is plain static HTML** — no JavaScript renders any of the text. A Play reviewer, a crawler, or a browser with JS switched off sees the whole document. Keep it that way.
+
+### Adding an app
+
+1. Append a block to `window.PRIVACY_APPS` in **`scripts/privacy.js`** (`id`, `name`, `tagline`, `platform`, `updated`).
+2. Drop a square logo at `assets/apps/<id>/logo.svg`.
+3. Copy `privacy/puffy/index.html` to `privacy/<id>/index.html` and rewrite the policy text.
+4. Add one line to the `<noscript>` list in `privacy/index.html` so the page still works without JS.
+
+`id` does all the wiring — it is both the logo folder and the URL, so `id: "puffy"` means `assets/apps/puffy/logo.svg` and `/privacy/puffy/`.
+
+### Keeping a policy honest
+
+The Puffy policy was written from what the app's code actually does — storage, permissions, notifications, export, backup. If the app's behaviour changes, update the policy **before** that version ships and bump the effective date at the top of the page. A policy that no longer matches the app is worse than no policy.
+
+---
+
 ## 🚀 Deploying to GitHub Pages
 
 These files at the deploy root are the whole site:
 
 ```
-index.html            ← the page
-styles.css            ← design tokens + styles
-scripts/projects.js   ← YOU EDIT THIS (your content)
-scripts/app.js        ← rendering + interactions (no need to edit)
-.nojekyll             ← lets GitHub serve every file untouched
-assets/…              ← your images, résumé PDF, og-image, favicon
+index.html                ← the page
+styles.css                ← design tokens + styles
+scripts/projects.js       ← YOU EDIT THIS (your content)
+scripts/app.js            ← rendering + interactions (no need to edit)
+scripts/privacy.js        ← YOU EDIT THIS (apps listed at /privacy/)
+scripts/privacy-grid.js   ← renders the privacy picker (no need to edit)
+privacy/                  ← the privacy pages, one folder per app
+.nojekyll                 ← lets GitHub serve every file untouched
+assets/…                  ← your images, résumé PDF, og-image, favicon
 ```
 
 **Option A — user site (nicest URL):**

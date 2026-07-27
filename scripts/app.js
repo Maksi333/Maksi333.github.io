@@ -99,7 +99,11 @@
     setText('footer-year', String(new Date().getFullYear()));
     var roles = (SITE.roles && SITE.roles.length) ? SITE.roles : ['Software Developer'];
     setText('hero-role', roles[state.roleIdx % roles.length] || '');
+    // Subpages (e.g. /privacy/) set window.SITE_ROOT to their path back to the
+    // site root, so a relative résumé path from projects.js still resolves.
     var resume = (SITE.contact && SITE.contact.resume) || '#';
+    var rooted = /^([a-z]+:)?\/\//i.test(resume) || resume.charAt(0) === '/' || resume.charAt(0) === '#';
+    if (!rooted) resume = (window.SITE_ROOT || '') + resume;
     Array.prototype.forEach.call(document.querySelectorAll('[data-resume]'), function (a) { a.setAttribute('href', resume); });
   }
 

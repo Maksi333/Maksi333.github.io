@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="puffy-logo-title">
+  <title id="puffy-logo-title">Puffy app icon — the Puff mascot</title>
+  <!--
+    Puff, the Puffy mascot, traced from the fractional geometry in the app's own
+    Controls/PuffMascot.cs (PuffDrawable.Draw) so the web logo is the same avatar the
+    app draws, not a lookalike. Face diameter 380 inset at 66,66; tile colour #14B36B
+    is the app icon colour declared in Nicotine_Stop.csproj.
+  -->
+  <defs>
+    <clipPath id="puffy-face">
+      <circle cx="256" cy="256" r="190"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="#14B36B"/>
+
+  <circle cx="256" cy="256" r="190" fill="#BDF0D4"/>
+
+  <g clip-path="url(#puffy-face)">
+    <ellipse cx="256" cy="411.8" rx="228" ry="95" fill="#14B36B" opacity=".18"/>
+  </g>
+
+  <g fill="#FFB1A6" opacity=".85">
+    <ellipse cx="149.6" cy="292.1" rx="26.6" ry="17.1"/>
+    <ellipse cx="362.4" cy="292.1" rx="26.6" ry="17.1"/>
+  </g>
+
+  <g fill="#17322B">
+    <ellipse cx="189.5" cy="233.2" rx="20.9" ry="26.6"/>
+    <ellipse cx="322.5" cy="233.2" rx="20.9" ry="26.6"/>
+  </g>
+
+  <path d="M210.4 294 Q256 347.2 301.6 294" fill="none" stroke="#17322B" stroke-width="13.3" stroke-linecap="round"/>
+</svg>

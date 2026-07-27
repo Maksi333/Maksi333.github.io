@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Privacy Policies — Simon Nørgaard Andersen</title>
+  <meta name="description" content="Privacy policies for the apps built by Simon Nørgaard Andersen. Pick an app to read its policy.">
+  <meta name="theme-color" content="#0B0D10">
+  <link rel="canonical" href="https://maksi333.github.io/privacy/">
+  <meta property="og:title" content="App Privacy Policies — Simon Nørgaard Andersen">
+  <meta property="og:description" content="Privacy policies for the apps built by Simon Nørgaard Andersen.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>window.SITE_ROOT = '../';</script>
+  <script defer src="../scripts/projects.js"></script>
+  <script defer src="../scripts/app.js"></script>
+  <script defer src="../scripts/privacy.js"></script>
+  <script defer src="../scripts/privacy-grid.js"></script>
+</head>
+<body>
+
+<!-- Fixed background layers (behind all content) -->
+<div class="bg-ambient" aria-hidden="true"></div>
+<canvas class="bg-constellation" data-constellation aria-hidden="true"></canvas>
+
+<!-- Header / nav -->
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="../index.html"><span class="brand-dot"></span>Simon N. Andersen</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a class="nav-link" href="../index.html#work">Work</a>
+        <a class="nav-link" href="../index.html#about">About</a>
+        <a class="nav-link" href="../index.html#skills">Skills</a>
+        <a class="nav-link" href="../index.html#contact">Contact</a>
+      </div>
+      <a class="btn btn--outline btn--header" href="./" aria-current="page">Privacy</a>
+      <a class="btn btn--accent btn--header" data-resume href="#" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="section subpage privacy">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Portfolio</a>
+      <span class="crumbs-sep" aria-hidden="true">/</span>
+      <span>Privacy</span>
+    </nav>
+
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">// Privacy</div>
+      <h2 class="h2">App privacy policies</h2>
+      <p class="privacy-sub">Every app I publish gets its own policy on its own page. Pick an app to read exactly what it stores, what it never collects, and how to delete it all.</p>
+    </div>
+
+    <div class="grid" id="privacy-grid"></div>
+    <div class="empty" id="privacy-empty" hidden>No published apps yet.</div>
+
+    <noscript>
+      <!-- Mirrors scripts/privacy.js. Add a line here when you add an app. -->
+      <div class="privacy-fallback">
+        <a href="puffy/">Puffy — Nicotine Stop · privacy policy →</a>
+      </div>
+    </noscript>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-text">&copy; <span id="footer-year">2026</span> <span id="footer-name">Simon Nørgaard Andersen</span></div>
+      <div class="footer-text">Built with HTML, CSS &amp; a lot of AI.</div>
+      <a class="footer-link" href="../index.html">Back to portfolio &#8593;</a>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Back-to-top FAB -->
+<button class="to-top" data-totop aria-label="Back to top">&#8593;</button>
+
+</body>
+</html>
