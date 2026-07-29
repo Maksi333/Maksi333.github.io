@@ -32,6 +32,8 @@ All of that also lives in `scripts/projects.js`, in the **`window.SITE`** object
 | `category` | Drives the filter chips (chips are built automatically). |
 | `tags` | Small mono pills on the card. |
 | `thumbnail` | `assets/projects/<id>/cover.png`. Missing images fall back to a striped placeholder. |
+| `logo` | Optional. A square app icon (e.g. `assets/apps/<id>/logo.svg`) shown centred on a glow instead of the `thumbnail` — the same look as the app cards on `/privacy/`. |
+| `logoGlow` | Optional tint for that glow, e.g. `"rgba(20, 179, 107, .20)"`. Defaults to the site's blue accent. |
 | `gallery` | Optional array of image paths, shown in the detail view (each opens a lightbox). |
 | `status` | `Live` / `In Development` / `Prototype` — colored status dot. |
 | `year`, `featured` | Sort order: featured first, then newest year first. |

@@ -55,9 +55,38 @@ window.SITE = {
  *    • Order: featured first, then newest `year` first.
  *    • A card only shows the link buttons whose URL is non-empty.
  *    • Clicking a card opens a detail view using `description` + `gallery`.
+ *    • A card shows a wide screenshot (`thumbnail`) — unless you give it a
+ *      square app icon via `logo`, which is centred on a glow instead, exactly
+ *      like the app cards on /privacy/. `logoGlow` tints that glow (optional).
  *  To add a project: copy a { … } block, paste it in, edit the fields.
  * ------------------------------------------------------------------------- */
 window.PROJECTS = [
+  // ── Puffy — the published Android app (icon reused from /privacy/) ─────
+  {
+    id: "puffy",
+    title: "Puffy — Nicotine Stop",
+    tagline: "Quit nicotine pouches with a live counter, savings goals, and a craving SOS",
+    category: "Mobile App",
+    tags: ["Android", ".NET MAUI", "C#", "Local-first"],
+    description:
+      "An Android app for quitting nicotine pouches: a live counter of time, pouches " +
+      "avoided and money saved, savings goals you can attach a photo to, and a craving " +
+      "SOS for the moments that matter. Progress is rewarded with XP, levels, badges and " +
+      "streaks, and home-screen widgets keep the numbers in view. Fully offline — no " +
+      "account, no server, no analytics: every entry stays in the app's private storage " +
+      "on the phone, with CSV export and a one-tap reset.",
+    // Square app icon — centred on the card instead of a stretched screenshot.
+    logo: "assets/apps/puffy/logo.svg",
+    logoGlow: "rgba(20, 179, 107, .20)",
+    thumbnail: "",
+    gallery: [],
+    status: "Live",
+    year: 2026,
+    featured: true,
+    // ➜ TODO: swap in the real Play Store URL once the listing is public.
+    links: { playStore: "https://play.google.com/store/apps/details?id=your.app.id", appStore: "", github: "", demo: "", video: "", caseStudy: "" },
+  },
+
   // ── Seed 1 ────────────────────────────────────────────────────────────
   {
     id: "esk8-tracker",

@@ -67,7 +67,8 @@
     var gallery = p.gallery || [];
     return {
       id: p.id, title: p.title, tagline: p.tagline, category: p.category, description: p.description,
-      thumbnail: p.thumbnail, status: p.status, year: p.year, featured: p.featured,
+      thumbnail: p.thumbnail, logo: p.logo, logoGlow: p.logoGlow,
+      status: p.status, year: p.year, featured: p.featured,
       tags: p.tags || [],
       links: links, hasLinks: links.length > 0,
       gallery: gallery, hasGallery: gallery.length > 0,
@@ -121,8 +122,15 @@
     });
   }
 
+  /* A project shows either a wide screenshot (`thumbnail`, stretched to fill) or
+   * a square app icon (`logo`, centred on a glow like the /privacy/ picker).
+   * `logoGlow` tints that glow; leaving it out falls back to the site accent. */
+  function glowStyle(p) { return p.logoGlow ? '--logo-glow:' + p.logoGlow + ';' : null; }
+
   function cardEl(p, i) {
-    var thumbKids = [el('div', { 'class': 'thumbwrap', style: "background-image:url('" + p.thumbnail + "'),var(--stripe);" })];
+    var thumbKids = [p.logo
+      ? el('img', { 'class': 'thumb-logo', src: p.logo, alt: '', width: '104', height: '104', loading: 'lazy' })
+      : el('div', { 'class': 'thumbwrap', style: "background-image:url('" + p.thumbnail + "'),var(--stripe);" })];
     if (p.featured) thumbKids.push(el('span', { 'class': 'badge-featured', text: 'Featured' }));
     thumbKids.push(el('span', { 'class': 'status-pill' }, [
       el('span', { 'class': 'status-dot', style: 'background:' + p.statusColor + ';' }),
@@ -153,7 +161,7 @@
       onClick: function () { openProject(p.id); },
       onKeyDown: function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProject(p.id); } }
     }, [
-      el('div', { 'class': 'thumb' }, thumbKids),
+      el('div', { 'class': 'thumb' + (p.logo ? ' thumb--logo' : ''), style: glowStyle(p) }, thumbKids),
       el('div', { 'class': 'card-body' }, bodyKids)
     ]);
   }
@@ -225,6 +233,7 @@
    * ----------------------------------------------------------------------- */
   function buildModal(p) {
     var coverKids = [el('button', { 'class': 'modal-close', 'aria-label': 'Close', type: 'button', text: '×', onClick: closeModal })];
+    if (p.logo) coverKids.unshift(el('img', { 'class': 'modal-cover-logo', src: p.logo, alt: p.title + ' app icon', width: '132', height: '132' }));
     if (orderedIds.length > 1) {
       coverKids.push(el('button', { 'class': 'modal-nav modal-nav--prev', 'aria-label': 'Previous project', type: 'button', text: '‹', onClick: function () { navModal(-1); } }));
       coverKids.push(el('button', { 'class': 'modal-nav modal-nav--next', 'aria-label': 'Next project', type: 'button', text: '›', onClick: function () { navModal(1); } }));
@@ -261,8 +270,12 @@
       })));
     }
 
+    var coverProps = p.logo
+      ? { 'class': 'modal-cover modal-cover--logo', style: glowStyle(p) }
+      : { 'class': 'modal-cover', style: "background-image:url('" + p.thumbnail + "'),var(--stripe-lg);" };
+
     var dialog = el('div', { 'class': 'modal', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'modal-title-h', tabindex: '-1' }, [
-      el('div', { 'class': 'modal-cover', style: "background-image:url('" + p.thumbnail + "'),var(--stripe-lg);" }, coverKids),
+      el('div', coverProps, coverKids),
       el('div', { 'class': 'modal-body' }, bodyKids)
     ]);
 

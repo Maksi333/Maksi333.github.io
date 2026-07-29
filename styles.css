@@ -250,6 +250,22 @@ button { font-family: inherit; }
 }
 .card:hover .thumbwrap { transform: scale(1.06); }
 
+/* A project that ships a square app icon gets the icon centred on a soft glow
+ * instead of a stretched screenshot — the same treatment as the /privacy/
+ * picker. `logo` in projects.js switches it on; `logoGlow` tints the halo. */
+.thumb--logo {
+  display: grid; place-items: center;
+  background:
+    radial-gradient(58% 70% at 50% 46%, var(--logo-glow, rgba(79, 140, 255, .18)), transparent 68%),
+    var(--thumb-bg);
+}
+.thumb-logo {
+  width: 104px; height: 104px; display: block; border-radius: 23px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+  transition: transform .4s var(--ease);
+}
+.card:hover .thumb-logo { transform: scale(1.06); }
+
 .badge-featured {
   position: absolute; top: 12px; left: 12px;
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
@@ -374,6 +390,16 @@ button { font-family: inherit; }
 .modal-cover {
   position: relative; aspect-ratio: 16 / 9;
   background-size: cover, auto; background-position: center; background-repeat: no-repeat;
+}
+.modal-cover--logo {
+  display: grid; place-items: center;
+  background:
+    radial-gradient(58% 70% at 50% 46%, var(--logo-glow, rgba(79, 140, 255, .18)), transparent 68%),
+    var(--thumb-bg);
+}
+.modal-cover-logo {
+  width: 132px; height: 132px; display: block; border-radius: 29px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .5);
 }
 .modal-close {
   position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 11px;
