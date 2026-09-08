@@ -27,7 +27,7 @@ window.SITE = {
   // Short paragraph shown in the About section. Rewrite freely.
   about:
     "I'm a software developer with an AP Degree in Computer Science (Datamatiker) and " +
-    "professional experience shipping C# and .NET — from database and API to the " +
+    "professional experience shipping C# and .NET, from database and API to the " +
     "interface people actually use. I also hold an AP Degree in Financial Management " +
     "(Finansøkonom) and spent a few years at Nordea, so I understand the business " +
     "behind the code. On the side I build apps and websites with AI as a co-pilot: " +
@@ -71,17 +71,19 @@ window.PROJECTS = [
   // ── Puffy ────────────────────────────────────────────
   {
     id: "puffy",
-    title: "Puffy — Nicotine Stop",
-    tagline: "Quit nicotine pouches with a live counter, savings goals, and a craving SOS",
+    title: "Puffy",
+    tagline: "Quit snus or cigarettes with a live counter, savings goals and a craving SOS",
     category: "Mobile App",
     tags: ["Android", ".NET MAUI", "C#", "Local-first"],
     description:
-      "An Android app for quitting nicotine pouches: a live counter of time, pouches " +
-      "avoided and money saved, savings goals you can attach a photo to, and a craving " +
-      "SOS for the moments that matter. Progress is rewarded with XP, levels, badges and " +
-      "streaks, and home-screen widgets keep the numbers in view. Fully offline — no " +
-      "account, no server, no analytics: every entry stays in the app's private storage " +
-      "on the phone, with CSV export and a one-tap reset.",
+      "An Android app for quitting nicotine, whether that means snus pouches or " +
+      "cigarettes. You pick your habit when you set it up and the app rewords itself " +
+      "around it, from “pouches skipped” to “cigarettes not smoked”. A live counter " +
+      "tracks time clean, units avoided and money saved, and those savings fund goals " +
+      "you set for yourself. Cravings get their own SOS screen with breathing, " +
+      "distraction games and your own reasons for quitting, and a slip only resets the " +
+      "current streak, never the money or the badges. Everything runs offline with no " +
+      "account, no server and no analytics.",
     // Square app icon — centred on the card instead of a stretched screenshot.
     logo: "assets/apps/puffy/logo.svg",
     logoGlow: "rgba(20, 179, 107, .20)",
@@ -101,10 +103,13 @@ window.PROJECTS = [
     category: "Mobile App",
     tags: ["Android", ".NET MAUI", "C#", "GPS", "Local-first"],
     description:
-      "An Android app for logging esk8 rides with live GPS tracking, a velocity-ramp " +
-      "colour system that paints the route by speed, and per-ride stats you can export. " +
-      "Everything is stored locally on the phone — no account, no cloud — for riders " +
-      "who want their data to stay on their own device.",
+      "An Android app for logging electric skateboard rides. It records the route over " +
+      "GPS and paints it on a velocity colour ramp, blue while you cruise through to red " +
+      "at top speed, then saves distance, speed and elevation into a history you can " +
+      "browse ride by ride. A garage holds your boards, lifetime stats and achievements " +
+      "build up as you ride, and a foreground service keeps recording with the screen " +
+      "off. Every number comes from real rides, stored on the phone with no account and " +
+      "no cloud.",
     logo: "assets/apps/esk8-tracker/logo.svg",
     logoGlow: "rgba(46, 124, 246, .20)",
     thumbnail: "",
@@ -119,14 +124,17 @@ window.PROJECTS = [
   {
     id: "cali",
     title: "Cali",
-    tagline: "Bodyweight workouts, skill trees, and achievements — all offline",
+    tagline: "Bodyweight workouts, skill trees and achievements, all offline",
     category: "Mobile App",
     tags: ["Android", ".NET MAUI", "C#", "Fitness", "Local-first"],
     description:
-      "A calisthenics training app with custom workout plans, AMRAP/EMOM/Tabata modes, " +
-      "a skill-progression tree that unlocks harder movements as you earn them, and a " +
-      "53-achievement system. Local-first and offline: no login, no server, and your " +
-      "training history never leaves the phone.",
+      "A calisthenics app for training on nothing but your own bodyweight. Build your " +
+      "own plans or start from the ones that ship with it, run them in AMRAP, EMOM or " +
+      "Tabata modes, and log the reps you actually did rather than the ones you planned. " +
+      "It tracks volume and personal records, unlocks harder movements through a skill " +
+      "tree, and hands out 53 achievements along the way. The screen stays awake mid " +
+      "workout and a beep marks the end of every rest. No login, no server, and the " +
+      "training history stays on the phone.",
     logo: "assets/apps/cali/logo.svg",
     logoGlow: "rgba(255, 107, 26, .20)",
     thumbnail: "",
