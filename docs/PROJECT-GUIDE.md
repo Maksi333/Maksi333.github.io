@@ -182,7 +182,7 @@ Change a token once and it updates everywhere it's used.
 | `status` | string | `Live`, `In Development`, or `Prototype` (colored dot). |
 | `year` | number | Used for sorting. |
 | `featured` | boolean | `true` sorts it to the top. |
-| `links` | object | `github`, `demo`, `playStore`, `appStore`, `video`, `caseStudy`. `""` hides the button. |
+| `links` | object | `github`, `demo`, `playStore`, `appStore`, `apk`, `video`, `caseStudy`. `""` hides the button. `apk` is a file in the repo (`assets/apk/…`) and renders as a download button with a ↓ instead of ↗. |
 
 **Auto-derived behavior (you don't configure these):**
 - Filter chips = `All` + every unique `category`.

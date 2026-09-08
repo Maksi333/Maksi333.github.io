@@ -21,7 +21,6 @@ That's the whole workflow. No HTML, CSS, or layout edits, ever.
 All of that also lives in `scripts/projects.js`, in the **`window.SITE`** object at the top:
 `name`, `roles` (the rotating hero text), `about`, `skills` (grouped tags), and `contact` (email, GitHub, LinkedIn, résumé — leave any blank to hide it).
 
-> ℹ️ The starter file ships with **placeholder** contact links (`simon@example.com`, `your-username`, …) and a few sample projects. Replace them with your real details before sharing the site.
 
 ### Project fields
 
@@ -37,7 +36,7 @@ All of that also lives in `scripts/projects.js`, in the **`window.SITE`** object
 | `gallery` | Optional array of image paths, shown in the detail view (each opens a lightbox). |
 | `status` | `Live` / `In Development` / `Prototype` — colored status dot. |
 | `year`, `featured` | Sort order: featured first, then newest year first. |
-| `links` | `github`, `demo`, `playStore`, `appStore`, `video`, `caseStudy`. Blank = hidden. |
+| `links` | `github`, `demo`, `playStore`, `appStore`, `apk`, `video`, `caseStudy`. Blank = hidden. `apk` points at a file in this repo (`assets/apk/<id>-v<version>.apk`) and renders as a download button. |
 
 ---
 
@@ -103,6 +102,7 @@ All asset paths are **relative**, so both schemes work. There is no build step a
 
 - `assets/projects/<id>/cover.png` (+ gallery images) per project
 - `assets/resume.pdf` — linked by the Résumé buttons
+- `assets/apk/<id>-v<version>.apk` — optional installable build, linked by a project's `apk` field
 - `assets/og-image.png` — social/link-preview image (already included; regenerate if you like)
 - `assets/profile.jpg` — optional About photo (a monogram placeholder shows until then)
 

@@ -55,15 +55,20 @@
 
   function strip(u) { return (u || '').replace(/^https?:\/\//, '').replace(/\/$/, ''); }
 
+  /* [key, label, arrow]. `apk` is a file in this repo rather than an outbound
+   * link, so it gets a download arrow and the download attribute. */
   var LINK_ORDER = [
     ['github', 'GitHub'], ['demo', 'Live Demo'], ['playStore', 'Play Store'],
-    ['appStore', 'App Store'], ['video', 'Video'], ['caseStudy', 'Case Study']
+    ['appStore', 'App Store'], ['apk', 'Download APK', '↓'], ['video', 'Video'], ['caseStudy', 'Case Study']
   ];
 
   function augment(p) {
     var l = p.links || {};
     var links = [];
-    LINK_ORDER.forEach(function (pair) { if (l[pair[0]]) links.push({ href: l[pair[0]], label: pair[1] }); });
+    LINK_ORDER.forEach(function (pair) {
+      if (!l[pair[0]]) return;
+      links.push({ href: l[pair[0]], label: pair[1], arrow: pair[2] || '↗', download: pair[0] === 'apk' });
+    });
     var gallery = p.gallery || [];
     return {
       id: p.id, title: p.title, tagline: p.tagline, category: p.category, description: p.description,
@@ -149,7 +154,8 @@
       bodyKids.push(el('div', { 'class': 'card-links' }, p.links.map(function (lnk) {
         return el('a', {
           'class': 'link-pill', href: lnk.href, target: '_blank', rel: 'noopener',
-          text: lnk.label + ' ↗',
+          download: lnk.download ? '' : null,
+          text: lnk.label + ' ' + lnk.arrow,
           onClick: function (e) { e.stopPropagation(); }
         });
       })));
@@ -266,7 +272,10 @@
     }
     if (p.hasLinks) {
       bodyKids.push(el('div', { 'class': 'modal-links' }, p.links.map(function (lnk) {
-        return el('a', { 'class': 'btn btn--accent btn--modal', href: lnk.href, target: '_blank', rel: 'noopener', text: lnk.label + ' ↗' });
+        return el('a', {
+          'class': 'btn btn--accent btn--modal', href: lnk.href, target: '_blank', rel: 'noopener',
+          download: lnk.download ? '' : null, text: lnk.label + ' ' + lnk.arrow
+        });
       })));
     }
 

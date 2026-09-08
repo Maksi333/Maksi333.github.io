@@ -68,7 +68,7 @@ window.SITE = {
  *  To add a project: copy a { … } block, paste it in, edit the fields.
  * ------------------------------------------------------------------------- */
 window.PROJECTS = [
-  // ── Puffy — the published Android app (icon reused from /privacy/) ─────
+  // ── Puffy ────────────────────────────────────────────
   {
     id: "puffy",
     title: "Puffy — Nicotine Stop",
@@ -87,110 +87,54 @@ window.PROJECTS = [
     logoGlow: "rgba(20, 179, 107, .20)",
     thumbnail: "",
     gallery: [],
-    status: "Live",
+    status: "In Development",
     year: 2026,
     featured: true,
-    // ➜ TODO: swap in the real Play Store URL once the listing is public.
-    links: { playStore: "https://play.google.com/store/apps/details?id=your.app.id", appStore: "", github: "", demo: "", video: "", caseStudy: "" },
+    links: { github: "https://github.com/Maksi333/Nicotine_Stop", apk: "assets/apk/puffy-v1.0.apk", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
   },
 
-  // ── Seed 1 ────────────────────────────────────────────────────────────
+  // ── Ride Tracker ────────────────────────────────────
   {
     id: "esk8-tracker",
     title: "Ride Tracker",
     tagline: "Local-first GPS ride tracking for electric skateboards",
     category: "Mobile App",
-    tags: ["Android", "Kotlin", "GPS", "Local-first"],
+    tags: ["Android", ".NET MAUI", "C#", "GPS", "Local-first"],
     description:
-      "A production-grade Android app for logging esk8 rides with GPS tracking, " +
-      "a velocity-ramp color system, and fully offline local storage — no account, " +
-      "no cloud. Built for riders who want their data to stay on their device.",
-    thumbnail: "assets/projects/esk8-tracker/cover.png",
-    gallery: [
-      "assets/projects/esk8-tracker/1.png",
-      "assets/projects/esk8-tracker/2.png",
-    ],
+      "An Android app for logging esk8 rides with live GPS tracking, a velocity-ramp " +
+      "colour system that paints the route by speed, and per-ride stats you can export. " +
+      "Everything is stored locally on the phone — no account, no cloud — for riders " +
+      "who want their data to stay on their own device.",
+    logo: "assets/apps/esk8-tracker/logo.svg",
+    logoGlow: "rgba(46, 124, 246, .20)",
+    thumbnail: "",
+    gallery: [],
     status: "In Development",
-    year: 2025,
+    year: 2026,
     featured: true,
-    // ➜ Replace these with your real URLs. Any blank ("") link hides its button.
-    links: { playStore: "https://play.google.com/store/apps/details?id=your.app.id", appStore: "", github: "https://github.com/your-username/esk8-tracker", demo: "", video: "", caseStudy: "" },
+    links: { apk: "assets/apk/esk8-tracker-v1.0.apk", github: "", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
   },
 
-  // ── Seed 2 ────────────────────────────────────────────────────────────
+  // ── Cali ─────────────────────────────────────────────
   {
-    id: "calisthenics-app",
-    title: "Calisthenics Trainer",
+    id: "cali",
+    title: "Cali",
     tagline: "Bodyweight workouts, skill trees, and achievements — all offline",
     category: "Mobile App",
-    tags: ["Mobile", "TypeScript", "Fitness", "Local-first"],
+    tags: ["Android", ".NET MAUI", "C#", "Fitness", "Local-first"],
     description:
-      "A calisthenics training app with custom workout plans, AMRAP/EMOM/Tabata " +
-      "modes, a skill-progression tree, and a 53-achievement system. Local-first, " +
-      "no login required.",
-    thumbnail: "assets/projects/calisthenics-app/cover.png",
+      "A calisthenics training app with custom workout plans, AMRAP/EMOM/Tabata modes, " +
+      "a skill-progression tree that unlocks harder movements as you earn them, and a " +
+      "53-achievement system. Local-first and offline: no login, no server, and your " +
+      "training history never leaves the phone.",
+    logo: "assets/apps/cali/logo.svg",
+    logoGlow: "rgba(255, 107, 26, .20)",
+    thumbnail: "",
     gallery: [],
     status: "In Development",
-    year: 2025,
+    year: 2026,
     featured: true,
-    links: { playStore: "", appStore: "", github: "https://github.com/your-username/calisthenics-trainer", demo: "", video: "", caseStudy: "" },
-  },
-
-  /* ========================================================================
-   *  SAMPLE CARDS BELOW — here to show the grid full and to demo the
-   *  category filter. Replace or delete them as you add real projects.
-   * ====================================================================== */
-
-  {
-    id: "portfolio-site",
-    title: "This Portfolio",
-    tagline: "The data-driven site you're looking at right now",
-    category: "Web App",
-    tags: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-    description:
-      "A static, animated portfolio deployed on GitHub Pages. Every project is a " +
-      "single object in one data file — adding a new one never touches the layout " +
-      "or styling. Fully responsive, keyboard-accessible, and reduced-motion aware.",
-    thumbnail: "assets/projects/portfolio-site/cover.png",
-    gallery: [],
-    status: "Live",
-    year: 2025,
-    featured: false,
-    links: { playStore: "", appStore: "", github: "", demo: "", video: "", caseStudy: "" },
-  },
-
-  {
-    id: "ride-insights",
-    title: "Ride Insights",
-    tagline: "Turn raw GPS logs into charts, streaks, and personal records",
-    category: "Data",
-    tags: ["Python", "Pandas", "Analytics"],
-    description:
-      "A sample data project: a notebook-to-dashboard pipeline that parses exported " +
-      "ride logs and surfaces distance, speed, and elevation trends over time.",
-    thumbnail: "assets/projects/ride-insights/cover.png",
-    gallery: [],
-    status: "Prototype",
-    year: 2024,
-    featured: false,
-    links: { playStore: "", appStore: "", github: "", demo: "", video: "", caseStudy: "" },
-  },
-
-  {
-    id: "habit-garden",
-    title: "Habit Garden",
-    tagline: "A calm habit tracker where consistency grows a little garden",
-    category: "Web App",
-    tags: ["TypeScript", "PWA", "Local-first"],
-    description:
-      "A sample web app concept: a lightweight, offline-first habit tracker with a " +
-      "playful growth visualisation to reward daily streaks.",
-    thumbnail: "assets/projects/habit-garden/cover.png",
-    gallery: [],
-    status: "Prototype",
-    year: 2024,
-    featured: false,
-    links: { playStore: "", appStore: "", github: "", demo: "", video: "", caseStudy: "" },
+    links: { apk: "assets/apk/cali-v1.0.apk", github: "", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
   },
 
   // ➜ Add new projects by copying a block above and editing the fields.

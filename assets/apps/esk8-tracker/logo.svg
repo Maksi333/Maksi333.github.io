@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="esk8-logo-title">
+  <title id="esk8-logo-title">Ride Tracker app icon — the velocity ring and bolt</title>
+  <!--
+    Composed from the app's own icon sources: Resources/AppIcon/appicon.svg (the
+    dark radial tile declared as MauiIcon Color #0B0E11 in Esk8_Tracker.csproj) and
+    appiconfg.svg — the velocity-ramp arc (blue → green → yellow → red) and bolt.
+  -->
+  <defs>
+    <radialGradient id="esk8-tile" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#141A21"/><stop offset="100%" stop-color="#0B0E11"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#esk8-tile)"/>
+  <path d="M 134.8 352.9 A 148 148 0 0 1 193.5 133.9" stroke="#2E7CF6" stroke-width="42" fill="none" stroke-linecap="round"/>
+  <path d="M 197.0 132.3 A 148 148 0 0 1 377.2 183.1" stroke="#22C55E" stroke-width="42" fill="none" stroke-linecap="round"/>
+  <path d="M 379.4 186.3 A 148 148 0 0 1 399.0 306.3" stroke="#F5C51E" stroke-width="42" fill="none" stroke-linecap="round"/>
+  <path d="M 397.9 310.0 A 148 148 0 0 1 377.2 352.9" stroke="#F03E3E" stroke-width="42" fill="none" stroke-linecap="round"/>
+  <circle cx="399.0" cy="229.7" r="30.2" fill="#FFFFFF"/>
+  <path d="M 267.0 169.0 L 212.0 279.0 L 250.5 279.0 L 245.0 367.0 L 300.0 257.0 L 261.5 257.0 Z" fill="#F2F5F7"/>
+</svg>

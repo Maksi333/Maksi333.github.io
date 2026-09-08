@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="cali-logo-title">
+  <title id="cali-logo-title">Cali app icon — the "C" monogram ring</title>
+  <!--
+    Composed from the app's own icon sources: Resources/AppIcon/appicon.svg (the
+    #0D0E11 tile declared as MauiIcon Color in Cali.csproj) and appiconfg.svg (the
+    orange "C" ring). The foreground is drawn from its 456pt grid scaled to 512.
+  -->
+  <rect width="512" height="512" rx="112" fill="#0D0E11"/>
+  <circle cx="256" cy="256" r="121.26" fill="none" stroke="#FF6B1A" stroke-width="51.65"
+          stroke-linecap="round" stroke-dasharray="507.5 254.9" transform="rotate(60 256 256)"/>
+</svg>
