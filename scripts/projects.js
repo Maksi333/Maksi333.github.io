@@ -31,19 +31,18 @@ window.SITE = {
 
   // Grouped tech tags. Add/remove groups and tags however you like.
   skills: [
-    { group: "Languages", items: ["Kotlin", "TypeScript", "Python", "SQL"] },
-    { group: "Mobile",    items: ["Android", "Jetpack Compose", "Local-first"] },
-    { group: "AI",        items: ["Claude", "LLM tooling", "AI-assisted dev", "Prompting"] },
-    { group: "Data",      items: ["Data science", "Analytics", "Pandas"] },
+    { group: "Languages", items: ["C#", "JavaScript", "Swift", "SQL"] },
+    { group: "Mobile",    items: ["Android", ".NET MAUI", "SwiftUI", "Local-first"] },
+    { group: "AI",        items: ["Claude", "Codex", "LLM tooling", "AI-assisted dev", "Prompting"] },
+    { group: "Data",      items: ["Data science", "Analytics", "Data modelling"] },
     { group: "Tools",     items: ["Git", "GitHub Pages", "VS Code", "Figma"] },
   ],
 
   // Contact links. Leave any value as "" to hide that item.
-  // ➜ TODO: replace these placeholders with your real links.
   contact: {
-    email:    "simon@example.com",
-    github:   "https://github.com/your-username",
-    linkedin: "https://www.linkedin.com/in/your-handle",
+    email:    "Simon_n_andersen@live.dk",
+    github:   "https://github.com/Maksi333",
+    linkedin: "https://www.linkedin.com/in/simonnandersen",
     resume:   "assets/resume.pdf",
   },
 };
