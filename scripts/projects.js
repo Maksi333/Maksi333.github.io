@@ -17,6 +17,8 @@ window.SITE = {
   // The first role shows immediately; the rest rotate in the hero.
   roles: [
     "Software Developer",
+    "Full Stack Developer",
+    ".NET Developer",
     "AI App Builder",
     "Data Scientist",
     "Indie Maker",
@@ -24,18 +26,24 @@ window.SITE = {
 
   // Short paragraph shown in the About section. Rewrite freely.
   about:
-    "I'm a software developer and data scientist (Datamatiker) who builds real, " +
-    "shippable products with AI as a co-pilot — mobile apps, websites, tools and " +
-    "everything in between. I like local-first software that respects your data, " +
-    "clean interfaces, and moving fast from idea to working prototype.",
+    "I'm a software developer with an AP Degree in Computer Science (Datamatiker) and " +
+    "professional experience shipping C# and .NET — from database and API to the " +
+    "interface people actually use. I also hold an AP Degree in Financial Management " +
+    "(Finansøkonom) and spent a few years at Nordea, so I understand the business " +
+    "behind the code. On the side I build apps and websites with AI as a co-pilot: " +
+    "local-first software that respects your data, clean interfaces, and a short path " +
+    "from idea to shipped.",
 
   // Grouped tech tags. Add/remove groups and tags however you like.
   skills: [
-    { group: "Languages", items: ["C#", "JavaScript", "Swift", "SQL"] },
-    { group: "Mobile",    items: ["Android", ".NET MAUI", "SwiftUI", "Local-first"] },
+    { group: "Languages", items: ["C#", "JavaScript", "Swift", "Java", "SQL"] },
+    { group: "Backend",   items: [".NET / .NET Core", "ASP.NET MVC", "Entity Framework", "REST APIs", "SQL databases"] },
+    { group: "Frontend",  items: ["Blazor", "Razor", "HTML", "CSS", "JavaScript"] },
+    { group: "Mobile",    items: ["Android", ".NET MAUI", "Flutter / Dart", "SwiftUI", "Local-first"] },
     { group: "AI",        items: ["Claude", "Codex", "LLM tooling", "AI-assisted dev", "Prompting"] },
     { group: "Data",      items: ["Data science", "Analytics", "Data modelling"] },
-    { group: "Tools",     items: ["Git", "GitHub Pages", "VS Code", "Figma"] },
+    { group: "Ways of working", items: ["Scrum", "Git & Git-flow", "Code review", "Extreme Programming"] },
+    { group: "Tools",     items: ["Visual Studio", "VS Code", "Unity", "GitHub Pages", "Figma"] },
   ],
 
   // Contact links. Leave any value as "" to hide that item.
