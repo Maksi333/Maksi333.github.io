@@ -112,7 +112,7 @@ window.PROJECTS = [
     status: "In Development",
     year: 2026,
     featured: true,
-    links: { apk: "assets/apk/esk8-tracker-v1.0.apk", github: "", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
+    links: { github: "https://github.com/Maksi333/Esk8_Tracker", apk: "assets/apk/esk8-tracker-v1.0.apk", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
   },
 
   // ── Cali ─────────────────────────────────────────────
@@ -134,7 +134,7 @@ window.PROJECTS = [
     status: "In Development",
     year: 2026,
     featured: true,
-    links: { apk: "assets/apk/cali-v1.0.apk", github: "", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
+    links: { github: "https://github.com/Maksi333/Cali", apk: "assets/apk/cali-v1.0.apk", playStore: "", appStore: "", demo: "", video: "", caseStudy: "" },
   },
 
   // ➜ Add new projects by copying a block above and editing the fields.
